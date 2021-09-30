@@ -1,6 +1,5 @@
 class JPEG:
 	def __init__(self, filename):
-		self.type = "JPEG"
 		self.filename = filename
 	def encode(self, message):
 		file = open(self.filename, "ab")
