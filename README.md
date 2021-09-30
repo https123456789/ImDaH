@@ -13,3 +13,7 @@ Examples of the library in use can be found in the Programs/*Language* folder.
 ## Contributing
 
 For more information on how to contribute to this repository, please see [CONTRIBUTING](CONTRIBUTING.md).
+
+## Issues
+
+For more information on how to report an issue, please see [ISSUES](ISSUES.md)
