@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Getting Started</title>
+		<link rel="stylesheet" href="style.css?rnd=1">
+	</head>
+	<body>
+		<h1>Getting Started</h1>
+
+		<p>To get started, download the libraries from <a href="https://github.com/https123456789/ImDaH/">Github</a>.</p>
+
+		<h2>Python</h2>
+
+		<h3>Hello World!</h3>
+
+		<p>To follow tradition, our first script will be called HelloWorld.py. As always, the completed script can be found in the <em>Programs/Python</em> folder.</p>
+
+		<p>This is the image that we are going to use:
+		<em>Programs/Python/image1.jpeg</em></p>
+
+		<img alt="image1.jpeg" src="https://github.com/https123456789/ImDaH/blob/main/Programs/Python/image1.jpeg">
+
+		<p>First, let's import the jpeg library.</p>
+
+		<pre><code>
+		import sys
+		sys.path.append("../../Libraries/Python/")
+		import jpeg
+		</pre></code>
+
+		<p>Now, we need to create a jpeg worker.</p>
+
+		<pre><code>
+		jpegWorker = jpeg.JPEG("image1.jpeg")
+		</code></pre>
+
+		<p>The JPEG object must be initialized with a filename which can be change at a later date by accessing <code>jpegWorker.filename</code>.</p>
+
+		<p>Next, we need to collect the message that the user wants to write to the file.</p>
+
+		<pre><code>
+		message = input("Message")
+		</code></pre>
+
+		<p>Oh, and we also want to write to the image.</p>
+
+		<pre><code>
+		jpegWorker.encode(message)
+		</code></pre>
+
+		<p>The message has now been written to the image in a way that image viewing/editing programs won't display it.</p>
+
+		<img alt="image1.jpeg" src="https://github.com/https123456789/ImDaH/blob/main/Programs/Python/image1.jpeg">
+
+		<p>To read the message, we need to call the decode function.</p>
+
+		<pre><code>
+		print(jpegWorker.decode())
+		</code></pre>
+
+		<p>The decode function will return the message which we then print. Finally, we can remove the message from the image with a call to the strip function.</p>
+
+		<pre><code>
+		jpegWorker.strip()
+		</code></pre>
+
+		<p>Our image is now exactly as it was at the start of the program.</p>
+
+		<img alt="imamge1.jpeg" src="https://github.com/https123456789/ImDaH/blob/main/Programs/Python/image1.jpeg">
+
+		<p>The completed program should look like this:</p>
+		<pre.<code>
+		import sys
+		sys.path.append("../../Libraries/Python")
+		import jpeg
+
+		# Create a jpeg worker
+		jpegWorker = jpeg.JPEG("image1.jpeg")
+
+		# Get the message and write to image
+		message = input("Message:")
+		jpegWorker.encode(message)
+
+		# Read the message
+		print(jpegWorker.decode())
+
+		# Strip the image of messages
+		jpegWorker.strip()
+		</code></pre>
+
+		<p>The output to the terminal should be:</p>
+		<pre></code>
+		$ python HelloWorld.py
+		Message:Hello World!
+		Hello World!
+		$ 
+		</code></pre>
+
+		<p>For more information about the jpeg worker, please see <a href="The JPEG Worker.html">The JPEG Worker</a>.</p>
+	</body>
+</html>
