@@ -1,0 +1,47 @@
+<h1>JPEG Worker</h1>
+
+<p>The JPEG Worker can be found in the <em>Libraries/Python/jpeg.py</em> file.</p>
+
+<h2>Basic Usage</h2>
+
+<pre><code>
+import sys
+# Add the library folder to pypath.
+sys.path.append("../../Libraries/Python/")
+# Impot library
+import jpeg
+
+# Create worker and add filename
+jpegWorker = jpeg.JPEG("image1.jpeg")
+
+# Write message
+message = input("Message:")
+jpegWorker.encode(message)
+
+# Read the message
+print("You wrote:")
+print(jpegWorker.decode())
+
+# Strip all messages from file
+jpegWorker.strip()
+print("Messages were stripped, file now reads:")
+print(jpegWorker.decode())
+</code></pre>
+
+<p>This script uses all three of the core functions of the jpeg library: encode, decode, strip.</p>
+
+<h2>The encode Function</h2>
+
+<p>The encode function is called with <code>jpegWorker.encode(message)</code> where jpegWorker is a <code>jpeg.JPEG</code> object, and <code>message</code> is a string. The function returns no value.</p>
+
+<h3>Note:</h3>
+
+<p>The function only appends messages to a file.</p>
+
+<h2>The decode Function</h1>
+
+<p>The decode function is called with <code>jpegWorker.decode()</code> where jpegWorker is a <code>jpeg.JPEG</code> object. The function returns all of the messages stored in the image.</p>
+
+<h2>The strip Function</h2>
+
+<p>The strip function is called with <code>jpegWorker.strip()</code> where jpegWorker is a <code>jpeg.JPEG</code> object. The function has no return value.</p>
